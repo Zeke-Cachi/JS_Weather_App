@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../img/sky-2.jpg);
+    transition: background-image 400ms ease-in-out;
+}
+
+
+.container {
+    flex-direction: column;
+    position: relative;
+    height: 35rem;
+    width: 60rem;
+}
+
+h1 {
+    position: absolute;
+    inset: 2rem auto;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.search-bar {
+    position: absolute;
+    inset: 3rem auto;
+    border: none;
+    outline: none;
+
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+input {
+    height: 2rem;
+    width: 12rem;
+    border-radius: 10px;
+    padding: 0  0 0 1rem;
+    background: transparent;
+    border: 2px solid rgba(240, 248, 255, 0.5);
+    margin-right: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid aliceblue;
+}
+
+input::placeholder {
+    color: aliceblue;
+    opacity: 1;
+}
+
+i {
+    cursor: pointer;
+}
+
+.background {
+    background: rgba(0,0,0, .6);
+}
+
+.weather-card {
+    width: 90%;
+    height: 65%;
+    padding: 1rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "temperature feels-like"
+    "temperature humidity"
+    "temperature pressure";
+}
+
+.wrong-city, .weather-title, .temperature, .feels-like, .humidity, .pressure {
+    text-align: center;
+    font-weight: 100;
+}
+
+.feels-like, .humidity, .pressure {
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.wrong-city {
+    grid-column: span 2;
+    font-size: 3rem;
+}
+
+.weather-title {
+    grid-area: title;
+    width: 90%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.temperature, .feels-like, .humidity, .pressure {
+    width: 100%;
+}
+
+.temperature {
+    width: 100%;
+    height: 100%;
+    grid-area: temperature;
+    display: grid;
+    place-items: center;
+    font-size: 6rem;
+}
+
+.feels-like {
+    grid-area: feels-like;
+}
+
+.humidity {
+    grid-area: humidity;
+}
+
+.pressure {
+    grid-area: pressure;
+}
+
+
+@media screen and (max-width: 734px) {
+    .weather-title {
+        font-size: 2rem;
+    }
+
+    .temperature {
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .temperature {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
