@@ -51,13 +51,13 @@ const getWeather = (city) => {
             createTemp.textContent = `${(temp - 273.15).toFixed(1)}° C`;
             let bodyBackground = document.querySelector('body');
             if (temp >= 300) {
-                bodyBackground.style.backgroundImage = 'url(img/hot-place-2.jpg)';
+                bodyBackground.style.backgroundImage = 'url(../img/hot-place-2.jpg)';
             }
             if (temp >= 283 && temp < 300 ) {
-                bodyBackground.style.backgroundImage = 'url(img/sky-2.jpg)';
+                bodyBackground.style.backgroundImage = 'url(../img/sky-2.jpg)';
             }
             if (temp < 283) {
-                bodyBackground.style.backgroundImage = 'url(img/cold-place-2.jpg)';
+                bodyBackground.style.backgroundImage = 'url(../img/cold-place-2.jpg)';
             }
 
             //CREATE "FEELS LIKE"
