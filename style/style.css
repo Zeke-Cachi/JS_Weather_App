@@ -39,7 +39,7 @@ h1 {
 }
 
 .search-bar {
-    position: absolute;
+    position: fixed;
     inset: 3rem auto 0;
     border: none;
     outline: none;
