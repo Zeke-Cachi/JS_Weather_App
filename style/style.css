@@ -142,7 +142,7 @@ i {
 }
 
 
-@media screen and (max-width: 734px) {
+@media screen and (max-width: 910px) {
     .weather-title {
         font-size: 2rem;
     }
@@ -150,14 +150,22 @@ i {
     .temperature {
         font-size: 4.5rem;
     }
+
+    .container {
+        width: 40rem;
+    }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 636px) {
     .temperature {
         font-size: 3rem;
     }
 
     h1 {
         font-size: 2rem;
+    }
+
+    .container {
+        width: 20rem;
     }
 }
